@@ -11,9 +11,9 @@
             $row = mysqli_fetch_array($result);
             $_SESSION['user'] = $row['id'];
             $_SESSION['name'] = $row['F_name']." ".$row['L_name'];
-            header("Location: http://localhost/project/index.php");
+            header("Location: http://localhost/WebProject/index.php");
         }else{
-            header("Location: http://localhost/project/index.php");
+            header("Location: http://localhost/WebProject/index.php");
         }
     }else{
         echo "not post";
