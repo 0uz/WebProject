@@ -1,3 +1,6 @@
+<?php session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
@@ -8,9 +11,8 @@
 </head>
 <body>
   <div class="form-popup" id="loginForm">
-    <form action="login.php" class="form-container">
+    <form action="login.php" class="form-container" method="POST">
       <h1>Login</h1>
-
       <label for="email"><b>Email</b></label>
       <input type="text" placeholder="Enter Email" name="email" required>
 
@@ -24,13 +26,12 @@
   </div>
 
   <div class="form-popup" id="regForm">
-    <form action="login.php" class="form-container">
+    <form action="register.php" class="form-container" method="POST">
       <h1>Register</h1>
-
-      <label for="email"><b>First name</b></label>
-      <input type="text" placeholder="Enter Firt Name" name="email" required>
-      <label for="email"><b>Second Name</b></label>
-      <input type="text" placeholder="Enter Second Name" name="email" required>
+      <label for="Fname"><b>First name</b></label>
+      <input type="text" placeholder="Enter First Name" name="Fname" required>
+      <label for="Lname"><b>Last Name</b></label>
+      <input type="text" placeholder="Enter Second Name" name="Lname" required>
       <label for="email"><b>Email</b></label>
       <input type="text" placeholder="Enter Email" name="email" required>
 
@@ -46,13 +47,23 @@
   <header id="header" class="clear">
     <div id="hgroup">
       <h1><a href="#">Rent A Car</a></h1>
-      <h2>Affordable Rent A Car Website</h2>
+      <h2>Affordable Rent A Car Website </h2>
     </div>
     <nav>
       <ul> 
         <li><a href="" >Cars</a></li>
         <li><a href="#">About Campaign</a></li>
-        <li ><a href="#" onclick="openForm()">Login</a></li>
+        <?php
+          if(isset($_SESSION['name'])){
+            echo "<li><a href='index.php' onclick=".session_destroy().">Logout</a></li>
+                  <li> Welcome ".$_SESSION['name']."</li>";
+          }else{
+            echo "<li id = 'loginButton'><a href='#' onclick='openForm()'>Login</a></li>";
+          }
+        ?>
+        
+        
+
       </ul>
     </nav>
   </header>
