@@ -10,3 +10,7 @@ function openForm() {
     closeForm("loginForm")
     document.getElementById("regForm").style.display = "block";
   }
+
+  function loginName(name) {
+    document.getElementById("loginButton").innerHTML = name;
+  }
