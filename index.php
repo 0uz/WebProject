@@ -74,28 +74,40 @@
     <!-- content body -->
     <div id="homepage">
       <!-- One Quarter -->
-      <section id="latest" class="clear">
-        <article class="one_quarter">
-          <figure><img src="images/arac1.png" width="215" height="245" alt="">
-           
-          </figure>
-        </article>
-        <article class="one_quarter">
-          <figure><img src="images/arac2.png" width="215" height="245" alt="">
-           
-          </figure>
-        </article>
-        <article class="one_quarter">
-          <figure><img src="images/arac3.png" width="215" height="245" alt="">
-           
-          </figure>
-        </article>
-        <article class="one_quarter lastbox">
-          <figure><img src="images/arac4.png" width="215" height="245" alt="">
-           
-          </figure>
-        </article>
-      </section>
+                  <!-- Slideshow container -->
+        <div class="slideshow-container">
+
+        <!-- Full-width images with number and caption text -->
+        <div class="mySlides fade">
+          <div class="numbertext">1 / 3</div>
+          <img src="images/arac1.png" style="width:100%">
+          <div class="text">Caption Text</div>
+        </div>
+
+        <div class="mySlides fade">
+          <div class="numbertext">2 / 3</div>
+          <img src="images/arac2.png" style="width 100%">
+          <div class="text">Caption Two</div>
+        </div>
+
+        <div class="mySlides fade">
+          <div class="numbertext">3 / 3</div>
+          <img src="images/arac3.png" style="width:100%">
+          <div class="text">Caption Three</div>
+        </div>
+
+        <!-- Next and previous buttons -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <br>
+
+        <!-- The dots/circles -->
+        <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
       <!-- / One Quarter -->
       <section id="shout">
         <p>You can rent the vehicle you want at the most affordable price between the dates you specify.</p>
