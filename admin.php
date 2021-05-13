@@ -61,89 +61,60 @@
             echo "<li id = 'loginButton'><a href='#' onclick='openForm()'>Login</a></li>";
           }
         ?>
-        
       </ul>
     </nav>
   </header>
-
 </div>
-<!-- content -->
+
+
+
 <div class="wrapper row2">
-  <div id="container" class="clear">
-    <!-- content body -->
-    <div id="homepage">
-                  <!-- Slideshow container -->
-        <div class="slideshow-container">
+  <div id="container" class="">
+    <form action="carRegister.php" class="" method="GET">
+      <div>
+        <label for="carName">Car name: </label>
+        <input type="text" id="carName" name="carName">
+      </div>
 
-        <!-- Full-width images with number and caption text -->
-        <div class="mySlides fade">
-          <div class="numbertext">1 / 3</div>
-          <img src="images/arac1.png" style="width:100%">
-          <div class="text">Caption Text</div>
-        </div>
+      <div>
+        <label for="price">Car Price(hourly): </label>
+        <input type="number" id="carPrice" name="carPrice" min=0>
+      </div>
 
-        <div class="mySlides fade">
-          <div class="numbertext">2 / 3</div>
-          <img src="images/arac2.png" style="width 100%">
-          <div class="text">Caption Two</div>
-        </div>
+      <div>
+        <label for="deposit">Deposit: </label>
+        <input type="number" id="deposit" name="deposit" min=0>
+      </div>
 
-        <div class="mySlides fade">
-          <div class="numbertext">3 / 3</div>
-          <img src="images/arac3.png" style="width:100%">
-          <div class="text">Caption Three</div>
-        </div>
+      <div>
+        <p>Gear:</p>
+        <input type="radio" id="auto" name="gear" value="Auto">
+        <label for="auto">Auto</label>
+        <input type="radio" id="manual" name="gear" value="Manual">
+        <label for="manual">Manual</label>
+      </div>
 
-        <!-- Next and previous buttons -->
-        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-        <a class="next" onclick="plusSlides(1)">&#10095;</a>
-        </div>
-        <br>
+      <div>
+        <p>Fuel:</p>
+        <input type="radio" id="diesel" name="fuel" value="diesel">
+        <label for="auto">Diesel</label>
+        <input type="radio" id="manual" name="fuel" value="gasoline">
+        <label for="gasoline">Gasoline</label>
+        <input type="radio" id="manual" name="fuel" value="electric">
+        <label for="electric">Electric</label>
+      </div>
 
-        <!-- The dots/circles -->
-        <div style="text-align:center">
-        <span class="dot" onclick="currentSlide(1)"></span>
-        <span class="dot" onclick="currentSlide(2)"></span>
-        <span class="dot" onclick="currentSlide(3)"></span>
-        </div>
-        
-      <section id="shout">
-        <p>You can rent the vehicle you want at the most affordable price between the dates you specify.</p>
-      </section>
-    </div>
-    <!-- main content -->
-
-  
-        <div class="rent">
-          <h1>Rent a car with one click </h1>
-        
-          <div class="selectTakePlace" >
-            <span style="font-size: 19px;" > Select Take Place :   </span>
-            <select name="city" id="city"  >
-              <option value="Istanbul">Istanbul</option>
-              <option value="Ankara">Ankara</option>
-              <option value="Izmır">Izmır</option>
-            </select>
-          </div>
-
-          <div>
-            <label for="takeTime">Take time:</label>
-            <input type="date" id="takeTime" name="Taketime">
-          </div>
-
-          <div>
-            <label for="dropTime">Drop time:</label>
-            <input type="date" id="dropTime" name="dropTime">
-          </div>
-
-          <button class="loginButton" onclick="myFunction()">Find the options</button>
-
-        </div>
-
-
-
+      <div>
+        <label for="imageFile">Select car photo: </label>
+        <input type='file'id="imageFile" name="imageFile" accept="image/*"/>
+      </div>
+      <button type="submit">Submit</button>
+    </form>
   </div>
 </div>
+
+
+
 <!-- Footer -->
 <div class="wrapper row3">
   <footer id="footer" class="clear">
@@ -151,8 +122,7 @@
    
   </footer>
 </div>
-
-<script src="scripts/scripts.js"></script>
+  <script src="scripts/scripts.js"></script>
 </body>
 </html>
  

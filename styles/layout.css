@@ -14,18 +14,7 @@ code{font-weight:normal; font-style:normal; font-family:Georgia, "Times New Roma
 .fl_left{float:left;}
 .fl_right{float:right;}
 
-img{margin:0; padding:0; border:none; line-height:normal; vertical-align:middle;}
-.imgholder, .imgl, .imgr{padding:4px; border:1px solid #D6D6D6; text-align:center;}
-.imgl{float:left; margin:0 15px 15px 0; clear:left;}
-.imgr{float:right; margin:0 0 15px 15px; clear:right;}
 
-/*----------------------------------------------HTML 5 Overrides-------------------------------------*/
-
-address, article, aside, figcaption, figure, footer, header, nav, section{display:block; margin:0; padding:0;}
-
-q{display:block; padding:0 10px 8px 10px; color:#979797; background-color:#ECECEC; font-style:italic; line-height:normal;}
-q:before{content:'� '; font-size:26px;}
-q:after{content:' �'; font-size:26px; line-height:0;}
 
 /* ----------------------------------------------Wrapper-------------------------------------*/
 
@@ -54,13 +43,6 @@ form, fieldset, legend{margin:0; padding:0; border:none;}
 legend{display:none;}
 input, textarea, select{font-size:12px; font-family:Georgia,"Times New Roman",Times,serif;}
 
-.one_quarter, .two_quarter, .three_quarter, .four_quarter{display:block; float:left; margin:0 20px 0 0;}
-.one_quarter{width:225px;}
-.two_quarter{width:470px;}
-.three_quarter{width:715px;}
-.four_quarter{width:960px; float:none; margin-right:0; clear:both;}
-.lastbox{margin-right:0;}
-
 /*----------------------------------------------Header-------------------------------------*/
 
 #header{padding:20px 0;}
@@ -84,13 +66,6 @@ input, textarea, select{font-size:12px; font-family:Georgia,"Times New Roman",Ti
 #container .last{margin:0;}
 #container .more{text-align:right;}
 
-/* ------Homepage-----*/
-
-#container #homepage{display:block; width:100%; line-height:1.6em;}
-
-#container #homepage #latest figure{padding:4px; border:1px solid #D6D6D6; text-align:center;}
-#container #homepage #latest figcaption{padding:5px; text-align:center; color:#979797; background-color:#EEEEEE; text-transform:uppercase; text-align:center;}
-
 /* ------Shout-----*/
 
 #container #shout{padding:0 0 20px 0; border-bottom:1px solid #DEDEDE; text-align:center;}
@@ -104,18 +79,17 @@ input, textarea, select{font-size:12px; font-family:Georgia,"Times New Roman",Ti
 #city{
   width: 200px;
   font-size: 30px; 
-  }
-  
-  #takeTime{
-    margin: 10px;
-    font-size: 30px; 
-  }
-  #dropTime{
-    margin:  10px;
-    font-size: 30px
-    
-  }
+}
 
+#takeTime{
+  margin: 10px;
+  font-size: 30px; 
+}
+#dropTime{
+  margin:  10px;
+  font-size: 30px
+  
+}
 
 /*----------------------------------------------Footer-------------------------------------*/
 
@@ -168,7 +142,7 @@ input, textarea, select{font-size:12px; font-family:Georgia,"Times New Roman",Ti
   }
   
   /* Full-width input fields */
-  .form-container input[type=text], .form-container input[type=password] {
+  .form-container input[type=email], .form-container input[type=password],.form-container input[type=text]{
     width:90%;
     padding: 15px;
     margin: 5px 0 22px 0;
@@ -177,7 +151,7 @@ input, textarea, select{font-size:12px; font-family:Georgia,"Times New Roman",Ti
   }
   
   /* When the inputs get focus, do something */
-  .form-container input[type=text]:focus, .form-container input[type=password]:focus {
+  .form-container input[type=mail]:focus, .form-container input[type=password]:focus ,.form-container input[type=text]:focus {
     background-color: #ddd;
     outline: none;
   }
@@ -223,7 +197,7 @@ input, textarea, select{font-size:12px; font-family:Georgia,"Times New Roman",Ti
   }
 
 
-
+/* --------------------------------------------------------------- Slideshow CSS*/
 
 /* Slideshow container */
 .slideshow-container {
