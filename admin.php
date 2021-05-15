@@ -101,11 +101,11 @@
 
       <div>
         <p>Fuel:</p>
-        <input type="radio" id="diesel" name="fuel" value="diesel" required>
+        <input type="radio" id="diesel" name="fuel" value="Diesel" required>
         <label for="auto">Diesel</label>
-        <input type="radio" id="manual" name="fuel" value="gasoline">
+        <input type="radio" id="manual" name="fuel" value="Gasoline">
         <label for="gasoline">Gasoline</label>
-        <input type="radio" id="manual" name="fuel" value="electric">
+        <input type="radio" id="manual" name="fuel" value="Electric">
         <label for="electric">Electric</label>
       </div>
 

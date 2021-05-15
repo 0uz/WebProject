@@ -7,6 +7,7 @@
 <title>Rent A Car</title>
 <meta charset="UTF-8">
 <link rel="stylesheet" href="styles/layout.css" type="text/css">
+<script src="https://kit.fontawesome.com/f10e5983fc.js" crossorigin="anonymous"></script>
 
 </head>
 <body>
@@ -46,7 +47,7 @@
 <div class="wrapper row1">
   <header id="header" class="clear">
     <div id="hgroup">
-      <h1><a href="#">Rent A Car</a></h1>
+      <h1><a href="index.php">Rent A Car</a></h1>
       <h2>Affordable Rent A Car Website </h2>
     </div>
     <nav>
@@ -113,7 +114,7 @@
     </div>
     <!-- main content -->
 
-  
+    <form action="rentList.php" class="form-container" method="POST">
         <div class="rent">
           <h1>Rent a car with one click </h1>
           <div class="selectTakePlace" >
@@ -203,6 +204,7 @@
             </select>
           </div>
 
+          
           <div>
             <label for="takeTime">Take time:</label>
             <input type="date" id="takeTime" name="Taketime">
@@ -215,7 +217,10 @@
 
           <button class="loginButton" onclick="myFunction()">Find the options</button>
 
+      </form>
+
         </div>
+
 
 
 

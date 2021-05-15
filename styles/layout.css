@@ -291,3 +291,47 @@ input, textarea, select{font-size:12px; font-family:Georgia,"Times New Roman",Ti
   from {opacity: .4}
   to {opacity: 1}
 }
+
+
+
+
+/*-------------RENT CAR-------------------------*/
+
+
+.card {
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.2);
+  max-width: 250px;
+  text-align: center;
+  font-family: arial;
+  float:left;
+  padding: 20px;
+  margin-left: 25px;
+  margin-top: 25px;
+}
+
+.price {
+  color: grey;
+  font-size: 20px;
+}
+
+.deposit {
+  color: grey;
+  font-size: 15px;
+}
+
+
+.card button {
+  border: none;
+  outline: 0;
+  padding: 12px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+.card button:hover {
+  opacity: 0.7;
+}
