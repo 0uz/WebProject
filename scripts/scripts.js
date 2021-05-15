@@ -13,8 +13,19 @@
 
   function loginName(name) {
     document.getElementById("loginButton").innerHTML = name;
-  }
 
+  }
+//---------------------------------Overlay
+
+function overlayON(text) {
+  document.getElementById("text").innerHTML = text+" Kiralanmistir";
+  document.getElementById("overlay").style.display = "block";
+}
+
+function overlayOFF() {
+  document.getElementById("overlay").style.display = "none";
+  window.location.replace("index.php");
+}
 
 //---------------------------------Slider
 

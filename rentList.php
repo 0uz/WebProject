@@ -68,7 +68,6 @@
 </div>
 
 
-
 <div class="wrapper row2">
   <div id="container" class="clear">
         <?php
@@ -85,14 +84,16 @@
               <p class='pricePerDay'> Total Price (For 30 Day) <br> $".($row['carPrice']*30)." </p>
     
               <i class='fas fa-cogs'>".$row['gear']."<i class='fas fa-gas-pump'></i> ".$row['fuel']." </i>
-            
-              <p><button>Rent Car Now</button></p>
+
+              <p><button onclick=overlayON('".$row['carBrand']."')> Rent Car Now </button></p>
             </div>
             ";
           };
 
         ?>
-        
+      <div id="overlay" onclick="overlayOFF()">
+          <div id="text"></div>
+      </div>
 
   </div>
 </div>
