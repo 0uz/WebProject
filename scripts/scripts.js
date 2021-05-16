@@ -16,18 +16,21 @@
 
   }
 //---------------------------------Overlay
-var carID,userID,timeTake,timeDrop;
+var carID,userID,timeTake,timeDrop,city;
 function overlayYES(){
-
+  overlayOFF();
+  window.location.replace("controller/rentCar.php?carID="+carID+"&userID="+userID+"&takeTime="+timeTake+"&dropTime="+timeDrop+"&city="+city);
+  
 }
 
-function overlayON(IDuser,IDcar,brand,city,takeTime,dropTime) {
-  document.getElementById("text").innerHTML = brand+" markali araba <br>"+city+" sehrinden <br>"+takeTime+" tarihinden "+dropTime+" tarihine kadar kiralanacaktir?";
+function overlayON(cityID,IDuser,IDcar,brand,takeTime,dropTime) {
+  document.getElementById("text").innerHTML = brand+" markali araba <br>"+cityID+" sehrinden <br>"+takeTime+" tarihinden "+dropTime+" tarihine kadar kiralanacaktir?";
   document.getElementById("overlay").style.display = "block";
   carID=IDcar;
   userID=IDuser;
   timeTake=takeTime;
   timeDrop=dropTime;
+  city=cityID;
 }
 
 function overlayOFF() {

@@ -17,7 +17,7 @@
         
             <i class='fas fa-cogs'>".$row['gear']."<i class='fas fa-gas-pump'></i> ".$row['fuel']." </i>
 
-            <p><button onclick=overlayON($userID,$carID,\"$brand\",\"$city\",\"$takeTime\",\"$dropTime\")> Rent Car Now </button></p>
+            <p><button onclick=overlayON(\"$city\",$userID,$carID,\"$brand\",\"$takeTime\",\"$dropTime\")> Rent Car Now </button></p>
           </div>
           
           ";

@@ -1,10 +1,6 @@
-<?php session_start();
-echo session_id();
-echo '<pre>';
-var_dump($_SESSION);
-echo '</pre>';
+<?php
+  session_start();
 ?>
-
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
@@ -60,7 +56,7 @@ echo '</pre>';
         <li><a href="#">About Campaign</a></li>
         <?php
           if(isset($_SESSION['name'])){
-            echo "<li><a href='index.php' onclick=".session_destroy().">Logout</a></li>
+            echo "<li><a href='controller/logout.php' >Logout</a></li>
                   <li> Welcome ".$_SESSION['name']."</li>";
           }else{
             echo "<li id = 'loginButton'><a href='#' onclick='openForm()'>Login</a></li>";

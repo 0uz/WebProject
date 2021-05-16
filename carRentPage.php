@@ -1,11 +1,6 @@
 <?php
   session_start();
-  echo session_id();
-  echo '<pre>';
-  var_dump($_SESSION);
-  echo '</pre>';
-  ?>
-
+?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
@@ -61,7 +56,7 @@
         <li><a href="">About Campaign</a></li>
         <?php
           if(isset($_SESSION['name'])){
-            echo "<li><a href='index.php' onclick=".session_destroy().">Logout</a></li>
+            echo "<li><a href='controller/logout.php'>Logout</a></li>
                   <li> Welcome ".$_SESSION['name']."</li>";
           }else{
             echo "<li id = 'loginButton'><a href='#' onclick='openForm()'>Login</a></li>";
@@ -83,7 +78,7 @@
         <div id="overlayContainer">
             <div id="text"></div>
             <div id="overlayButtons">
-              <button onclick="">Yes</button>
+              <button onclick="overlayYES()">Yes</button>
               <button onclick="overlayOFF()">No</button>
             </div>
         </div>

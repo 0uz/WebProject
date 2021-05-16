@@ -6,10 +6,9 @@
         $result = mysqli_query($db,$query);
         if(mysqli_num_rows($result) == 1){
             session_start();
-
             $row = mysqli_fetch_array($result);
             $_SESSION['user'] = $row['id'];
-            $_SESSION['name'] = $row['F_name']." ".$row['L_name'];
+            $_SESSION['name'] = ($row['F_name']." ".$row['L_name']);
             if($row['isAdmin'] == 1){
                 header("Location: http://localhost/WebProject/admin.php");
                 exit();
