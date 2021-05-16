@@ -1,5 +1,10 @@
-<?php session_start();
-?>
+<?php
+  session_start();
+  echo session_id();
+  echo '<pre>';
+  var_dump($_SESSION);
+  echo '</pre>';
+  ?>
 
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
@@ -12,7 +17,7 @@
 </head>
 <body>
   <div class="form-popup" id="loginForm">
-    <form action="login.php" class="form-container" method="POST">
+    <form action="controller/login.php" class="form-container" method="POST">
       <h1>Login</h1>
       <label for="email"><b>Email</b></label>
       <input type="email" placeholder="Enter Email" name="email" required>
@@ -27,7 +32,7 @@
   </div>
 
   <div class="form-popup" id="regForm">
-    <form action="register.php" class="form-container" method="POST">
+    <form action="controller/register.php" class="form-container" method="POST">
       <h1>Register</h1>
       <label for="Fname"><b>First name</b></label>
       <input type="text" placeholder="Enter First Name" name="Fname" required>
@@ -53,7 +58,7 @@
     <nav>
       <ul> 
         <li><a href="" >Cars</a></li>
-        <li><a href="#">About Campaign</a></li>
+        <li><a href="">About Campaign</a></li>
         <?php
           if(isset($_SESSION['name'])){
             echo "<li><a href='index.php' onclick=".session_destroy().">Logout</a></li>
@@ -70,29 +75,18 @@
 
 <div class="wrapper row2">
   <div id="container" class="clear">
-        <?php
-          $db = mysqli_connect("localhost","root","","car_rent");
-          $query = "SELECT * FROM cars";
-          $result = mysqli_query($db,$query);
-          while($row = mysqli_fetch_array($result)){
-            echo "
-              <div class='card'>
-              <img src='images/".$row['photoPath']."' alt='Car PNG' style='width:100%'>
-              <h1>".$row['carBrand']."</h1>
-              <p class='deposit'> Deposit <br> $".$row['deposit']." <p>
-              <p class='pricePerDay'> Price Per Day <br> $".$row['carPrice']."</p>
-              <p class='pricePerDay'> Total Price (For 30 Day) <br> $".($row['carPrice']*30)." </p>
-    
-              <i class='fas fa-cogs'>".$row['gear']."<i class='fas fa-gas-pump'></i> ".$row['fuel']." </i>
-
-              <p><button onclick=overlayON('".$row['carBrand']."')> Rent Car Now </button></p>
+          <?php
+          include_once("controller/rentlist.php");
+          listFromDB($_POST['city'],$_POST['takeTime'],$_POST['dropTime']);
+          ?>
+      <div id="overlay">
+        <div id="overlayContainer">
+            <div id="text"></div>
+            <div id="overlayButtons">
+              <button onclick="">Yes</button>
+              <button onclick="overlayOFF()">No</button>
             </div>
-            ";
-          };
-
-        ?>
-      <div id="overlay" onclick="overlayOFF()">
-          <div id="text"></div>
+        </div>
       </div>
 
   </div>

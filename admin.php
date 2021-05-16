@@ -1,4 +1,5 @@
 <?php session_start();
+echo session_id();
 ?>
 
 <!DOCTYPE html>
@@ -11,7 +12,7 @@
 </head>
 <body>
   <div class="form-popup" id="loginForm">
-    <form action="login.php" class="form-container" method="POST">
+    <form action="controller/login.php" class="form-container" method="POST">
       <h1>Login</h1>
       <label for="email"><b>Email</b></label>
       <input type="email" placeholder="Enter Email" name="email" required>
@@ -26,7 +27,7 @@
   </div>
 
   <div class="form-popup" id="regForm">
-    <form action="register.php" class="form-container" method="POST">
+    <form action="controller/register.php" class="form-container" method="POST">
       <h1>Register</h1>
       <label for="Fname"><b>First name</b></label>
       <input type="text" placeholder="Enter First Name" name="Fname" required>
@@ -70,7 +71,7 @@
 
 <div class="wrapper row2">
   <div id="container" class="">
-    <form action="carRegister.php" class="" method="POST" enctype="multipart/form-data">
+    <form action="controller/carRegister.php" class="" method="POST" enctype="multipart/form-data">
       <div>
         <label for="carBrand">Car brand: </label>
         <input type="text" id="carBrand" name="carBrand" required>
@@ -82,7 +83,7 @@
       </div>
 
       <div>
-        <label for="price">Car Price(hourly): </label>
+        <label for="price">Car Price(daily): </label>
         <input type="number" id="carPrice" name="carPrice" min=0 required>
       </div>
 

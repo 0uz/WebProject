@@ -16,15 +16,23 @@
 
   }
 //---------------------------------Overlay
+var carID,userID,timeTake,timeDrop;
+function overlayYES(){
 
-function overlayON(text) {
-  document.getElementById("text").innerHTML = text+" Kiralanmistir";
+}
+
+function overlayON(IDuser,IDcar,brand,city,takeTime,dropTime) {
+  document.getElementById("text").innerHTML = brand+" markali araba <br>"+city+" sehrinden <br>"+takeTime+" tarihinden "+dropTime+" tarihine kadar kiralanacaktir?";
   document.getElementById("overlay").style.display = "block";
+  carID=IDcar;
+  userID=IDuser;
+  timeTake=takeTime;
+  timeDrop=dropTime;
 }
 
 function overlayOFF() {
   document.getElementById("overlay").style.display = "none";
-  window.location.replace("index.php");
+  //window.location.replace("index.php");
 }
 
 //---------------------------------Slider

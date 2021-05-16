@@ -1,7 +1,7 @@
 <?php
 $db = mysqli_connect("localhost","root","","car_rent");
 //--------------------UPLOAD IMAGE-----------------------
-    $target_dir = "images/"; // folder path
+    $target_dir = "../images/"; // folder path
     $query = "SELECT MAX(id) as id from cars";
     $result = mysqli_query($db,$query);
     $row = mysqli_fetch_array($result);
@@ -20,4 +20,5 @@ $db = mysqli_connect("localhost","root","","car_rent");
     $query ="INSERT INTO cars (carBrand,carName,carPrice,deposit,gear,fuel,photoPath,cityID) VALUES ('$carBrand','$carName',$carPrice,$deposit,'$gear','$fuel','$imageFile',$cityID)";
     $result = mysqli_query($db,$query);
     header("Location: http://localhost/WebProject/index.php");
+    exit();
 ?>
