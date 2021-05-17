@@ -9,6 +9,12 @@
 <link rel="stylesheet" href="styles/layout.css" type="text/css">
 <script src="https://kit.fontawesome.com/f10e5983fc.js" crossorigin="anonymous"></script>
 
+<script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+
+
 </head>
 <body>
   <div class="form-popup" id="loginForm">
@@ -206,21 +212,14 @@
 
           
           <div>
-            <label for="takeTime">Take time:</label>
-            <input type="date" id="takeTime" name="takeTime" required>
+            <label for="datetimes">Take time:</label>
+            <input type="text" name="datetimes" id="datetimes" >
           </div>
-
-          <div>
-            <label for="dropTime">Drop time:</label>
-            <input type="date" id="dropTime" name="dropTime" required>
-          </div>
-
           <button class="loginButton" onclick="myFunction()">Find the options</button>
 
       </form>
 
         </div>
-
 
 
 
