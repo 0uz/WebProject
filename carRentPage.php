@@ -72,7 +72,10 @@
   <div id="container" class="clear">
           <?php
           include_once("controller/rentlist.php");
-          listFromDB($_POST['city'],$_POST['takeTime'],$_POST['dropTime']);
+          $date = $_POST['datetimes'];
+          $takeTime = substr($date,0,10);
+          $dropTime = substr($date,-10);
+          listFromDB($_POST['city'],$takeTime,$dropTime);
           ?>
       <div id="overlay">
         <div id="overlayContainer">
