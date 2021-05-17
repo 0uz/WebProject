@@ -121,12 +121,13 @@
     <!-- main content -->
 
     <form action="carRentPage.php" class="form-container" method="POST">
-        <div class="rent">
-          <h1>Rent a car with one click </h1>
-          <div class="selectTakePlace" >
-            <label for="city">Take Place:</label>
-            <select name="city" id="city"  required>
-              <option value="Adana">Adana</option>
+          <div class="searchrent">
+
+           <h1>Rent a car with one click </h1>
+        
+            <select class="takePlace" name="city" id="city" required>
+              <option value="" Default>Select place &#xf3c5;</i> </option>
+              <option value="Adana">Adana </option>
               <option value="Adıyaman">Adıyaman</option>
               <option value="Afyonkarahisar">Afyonkarahisar</option>
               <option value="Ağrı">Ağrı</option>
@@ -208,13 +209,13 @@
               <option value="Osmaniye">Osmaniye</option>
               <option value="Düzce">Düzce</option>
             </select>
+
+     
+          <div>
+          <!--  <label for="datetimes">Take time:</label> -->
+            <input class="time" type="text" name="datetimes" id="datetimes" >
           </div>
 
-          <div>
-            <label for="datetimes">Take time:</label>
-            <input type="text" name="datetimes" id="datetimes" >
-          </div>
-          
           <button class="loginButton" onclick="myFunction()">Find the options</button>
 
       </form>
