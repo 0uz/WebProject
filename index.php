@@ -210,11 +210,11 @@
             </select>
           </div>
 
-          
           <div>
             <label for="datetimes">Take time:</label>
             <input type="text" name="datetimes" id="datetimes" >
           </div>
+          
           <button class="loginButton" onclick="myFunction()">Find the options</button>
 
       </form>
