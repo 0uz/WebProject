@@ -383,3 +383,59 @@ div:focus {
   border-color: red;
   border-width: 15px;
 }
+
+/*icon for rent */
+select {
+  font-family: FontAwesome !important;
+}
+
+/*deneme */
+
+
+.searchrent{
+
+  width: 950px;
+  text-align: center;
+  font-family: 'Times New Roman', Times, serif;
+ 
+
+}
+
+.takePlace{
+  border: none;
+  margin-left: auto;
+  color: grey;
+  font-size: 10px; 
+}
+
+.takeTime{
+  border: none;
+  margin-left: auto;
+  color: grey;
+  font-size: 10px;
+}
+
+.dropTime {
+  border: none;
+  margin-left: auto;
+  color: grey;
+  font-size: 10px;
+}
+
+
+.searchrent button {
+  border: none;
+  outline: 0;
+  padding: 12px;
+  color: white;
+  background-color: #232323;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+.searchrent button:hover {
+  opacity: 0.7;
+}
+
