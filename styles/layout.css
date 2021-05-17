@@ -408,19 +408,15 @@ select {
   font-size: 10px; 
 }
 
-.takeTime{
+
+.time{
   border: none;
   margin-left: auto;
   color: grey;
-  font-size: 10px;
+  font-size: 20px;
+
 }
 
-.dropTime {
-  border: none;
-  margin-left: auto;
-  color: grey;
-  font-size: 10px;
-}
 
 
 .searchrent button {

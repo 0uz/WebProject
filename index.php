@@ -210,13 +210,10 @@
               <option value="Düzce">Düzce</option>
             </select>
 
-         
-            <!-- <label for="takeTime">Take time:</label>-->
-            <input class="takeTime" type="date" id="takeTime" name="takeTime"  required>
-          
+     
           <div>
-            <label for="datetimes">Take time:</label>
-            <input type="text" name="datetimes" id="datetimes" >
+          <!--  <label for="datetimes">Take time:</label> -->
+            <input class="time" type="text" name="datetimes" id="datetimes" >
           </div>
           <button class="loginButton" onclick="myFunction()">Find the options</button>
 
