@@ -1,12 +1,16 @@
 <?php
     function listFromDB($city,$takeTime,$dropTime) {
         $db = mysqli_connect("localhost","root","","car_rent");
-        $query = "SELECT * FROM cars";
+        $takeTime = date("Y-m-d", strtotime($takeTime));
+        $dropTime = date("Y-m-d", strtotime($dropTime)); 
+        $query = "SELECT * from cars where id NOT IN (SELECT carID from rentedcars WHERE (('$takeTime' <= dropTime) AND ('$dropTime' >= takeTime)))";
+        echo $query;
         $result = mysqli_query($db,$query);
         while($row = mysqli_fetch_array($result)){
           $brand = $row['carBrand'];
           $carID = $row['id'];
           $userID = $_SESSION['user'];
+
           echo "
             <div class='card'>
             <img src='images/".$row['photoPath']."' alt='Car PNG' style='width:100%'>
@@ -21,6 +25,8 @@
           </div>
           
           ";
+ 
+
         }
     }
 
