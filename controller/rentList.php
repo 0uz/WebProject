@@ -4,7 +4,6 @@
         $takeTime = date("Y-m-d", strtotime($takeTime));
         $dropTime = date("Y-m-d", strtotime($dropTime)); 
         $query = "SELECT * from cars where id NOT IN (SELECT carID from rentedcars WHERE (('$takeTime' <= dropTime) AND ('$dropTime' >= takeTime)))";
-        echo $query;
         $result = mysqli_query($db,$query);
         while($row = mysqli_fetch_array($result)){
           $brand = $row['carBrand'];

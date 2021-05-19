@@ -13,7 +13,7 @@
 <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
 <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
-
+<script type="text/javascript" src="scripts/scripts.js"></script>
 
 </head>
 <body>
@@ -25,6 +25,7 @@
 
       <label for="psw"><b>Password</b></label>
       <input type="password" placeholder="Enter Password" name="psw" required>
+      <label id="login" style="color: red; display:none"><b>Please login</b></label>
 
       <button type="submit" class="btn">Login</button>
       <button type="button" class="btnReg" onclick="openRegForm()">Sign Up</button>
@@ -61,6 +62,9 @@
         <li><a href="" >Cars</a></li>
         <li><a href="#">About Campaign</a></li>
         <?php
+          if(isset($_GET['message'])) {
+            echo "<script>loginMessage();</script>";
+          }
           if(isset($_SESSION['name'])){
             echo "<li><a href='controller/logout.php' >Logout</a></li>
                   <li> Welcome ".$_SESSION['name']."</li>";
@@ -72,6 +76,7 @@
       </ul>
     </nav>
   </header>
+
 
 </div>
 <!-- content -->
