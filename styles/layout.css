@@ -81,15 +81,8 @@ input, textarea, select{font-size:12px; font-family:Georgia,"Times New Roman",Ti
   font-size: 30px; 
 }
 
-#takeTime{
-  margin: 10px;
-  font-size: 30px; 
-}
-#dropTime{
-  margin:  10px;
-  font-size: 30px
-  
-}
+
+
 
 /*----------------------------------------------Footer-------------------------------------*/
 
@@ -361,27 +354,24 @@ div:focus {
 #text{
   font-size: 30px;
   color: white;
-  transform: translate(-50%,-50%);
-  -ms-transform: translate(-50%,-50%);
+/*  transform: translate(-50%,-50%); */
+  border-style: solid;
+ 
 }
 
 #overlayButtons{
-
   font-size: 50px;
 }
 
-#overlayButtons .button{
-  margin: 15px;
-  border-color: red;
-}
-
 #overlayContainer {
-  position: absolute;
+  position: fixed;
   top: 50%;
   left: 50%;
   width: 350px;
   border-color: red;
   border-width: 15px;
+  border-style: solid;
+  background-color: black;
 }
 
 /*icon for rent */
@@ -393,29 +383,42 @@ select {
 
 
 .searchrent{
-
+  font-size: 10px;
   width: 950px;
   text-align: center;
   font-family: 'Times New Roman', Times, serif;
- 
 
 }
 
 .takePlace{
+ 
   border: none;
-  margin-left: auto;
+  width: auto;
   color: grey;
   font-size: 10px; 
+  margin-top: 20px;
+  margin-left: 200px;
+  float: left;
 }
 
+.trying{
+  margin-top: 10px;
+  width: 300px;
+  margin-left: 50px;
+  float: left;
+ 
+}
 
-.time{
-  border: none;
-  margin-left: auto;
+.dates{
+  background-color: white;
+  text-align: center;
   color: grey;
-  font-size: 20px;
-
+  font-size: 20px; 
+  background-color: white !important;
+  
 }
+
+
 
 
 
@@ -434,4 +437,6 @@ select {
 .searchrent button:hover {
   opacity: 0.7;
 }
+
+
 
