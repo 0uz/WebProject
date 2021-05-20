@@ -129,9 +129,8 @@
           <div class="searchrent">
 
            <h1>Rent a car with one click </h1>
-        
             <select class="takePlace" name="city" id="city" required>
-              <option value="" Default>Select place &#xf3c5;</i> </option>
+              <option value="" Default >Select place &#xf3c5; </option>
               <option value="Adana">Adana </option>
               <option value="Adıyaman">Adıyaman</option>
               <option value="Afyonkarahisar">Afyonkarahisar</option>
