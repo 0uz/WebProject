@@ -8,6 +8,9 @@
     "minDate": today
   });
   
+
+
+
   function openForm() {
     document.getElementById("loginForm").style.display = "block";
   }
@@ -15,6 +18,11 @@
   function loginMessage() {
     document.getElementById("loginForm").style.display = "block";
     document.getElementById("login").style.display = "block";
+  }
+
+  function existMessage() {
+    document.getElementById("regForm").style.display = "block";
+    document.getElementById("register").style.display = "block";
   }
 
   function closeForm(id) {

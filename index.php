@@ -46,6 +46,7 @@
       <label for="psw"><b>Password</b></label>
       <input type="password" placeholder="Enter Password" name="psw" required>
 
+      <label id="register" style="color: red; display:none"><b>User Exist</b></label>
       <button type="submit" class="btn">Submit</button>
       <button type="button" class="btn cancel" onclick="closeForm('regForm')">Close</button>
     </form>
@@ -63,11 +64,16 @@
         <li><a href="#">About Campaign</a></li>
         <?php
           if(isset($_GET['message'])) {
-            echo "<script>loginMessage();</script>";
+            if($_GET['message'] == 'login'){
+              echo "<script>loginMessage();</script>";
+            }
+            if($_GET['message'] == 'exist'){
+              echo "<script>existMessage();</script>";
+            }
           }
           if(isset($_SESSION['name'])){
             echo "<li><a href='controller/logout.php' >Logout</a></li>
-                  <li> Welcome ".$_SESSION['name']."</li>";
+                  <li><a href='profile.php' > Welcome ".$_SESSION['name']."</a></li>";
           }else{
             echo "<li id = 'loginButton'><a href='#' onclick='openForm()'>Login</a></li>";
           }
