@@ -61,8 +61,8 @@
     </div>
     <nav>
       <ul> 
-        <li><a href="" >Cars</a></li>
-        <li><a href="#">About Campaign</a></li>
+        <li><a href="cars.php" >Cars</a></li>
+        <li><a href="campaign.php">About Campaign</a></li>
         <?php
           if(isset($_GET['message'])) {
             if($_GET['message'] == 'login'){

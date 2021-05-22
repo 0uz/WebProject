@@ -70,24 +70,37 @@
 
 <div class="wrapper row2">
   <div id="container" class="clear">
-          <?php
-          include_once("controller/rentlist.php");
-          $date = $_POST['datetimes'];
-          $takeTime = substr($date,0,10);
-          $dropTime = substr($date,-10);
-          listFromDB($_POST['city'],$takeTime,$dropTime);
-          ?>
-      <div id="overlay">
-        <div id="overlayContainer">
+    
 
 
-            <div id="text"></div>
-            <p class="remark"> &nbsp&nbsp&nbsp (You can make the payment to the branch you received <br> &nbsp&nbsp&nbsp on the pick up date of receipt.)</p>
-              <button class="yesButton" onclick="overlayYES()">Apply</button>
-              <button class="noButton" onclick="overlayOFF()">Cancel</button>
-           
-        </div>
-      </div>
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="images/arac3.png" alt="Avatar" style="width:300px;height:200px;">
+    </div>
+    <div class="flip-card-back">
+      <h1>BMW</h1> 
+      <p>  Fuel Type</p> 
+      <p>  Transmission Type</p>
+    </div>
+  </div>
+</div>
+
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="images/arac3.png" alt="Avatar" style="width:300px;height:200px;">
+    </div>
+    <div class="flip-card-back">
+      <h1>BMW</h1> 
+      <p>  Fuel Type</p> 
+      <p>  Transmission Type</p>
+    </div>
+  </div>
+</div>
+
+
+
 
   </div>
 </div>

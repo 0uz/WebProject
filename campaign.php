@@ -70,24 +70,27 @@
 
 <div class="wrapper row2">
   <div id="container" class="clear">
-          <?php
-          include_once("controller/rentlist.php");
-          $date = $_POST['datetimes'];
-          $takeTime = substr($date,0,10);
-          $dropTime = substr($date,-10);
-          listFromDB($_POST['city'],$takeTime,$dropTime);
-          ?>
-      <div id="overlay">
-        <div id="overlayContainer">
+          <h1> Company Outline </h1>
+          <p class="campaign">We are  Rent-A-Car. Founded in 2021,  Rent-A-Car is Turkey's most distinguished rental car company.
+We provide customers with approximately 120 locations and 2,000 vehicles throughout Turkey.
+As we are not affiliated with any specific automaker, we are able to provide a variety of vehicle makes and models for customers to rent.
+Rather than let vehicles age, we also replace our most popular passenger vehicles every few years.
+Replacing used vehicles eliminates uncomfortable wear and tear, and reduces the risk of breakdown and other inconveniences to our customers.
+The most trusted name in vehicle rentals. </p>
+          <h1>Action Guidlines </h1>
+          <p class="campaign">We will be united to do followings: <br>
+1. Try to offer safe, trusted, clean and comfortable vehicle as well as upmost satisfactory and best services to our clients to obtain best confident to us from them.<br>
+2. Challenge always to introduce innovative and unique services to offer convenient and economical vehicle usage services.<br>
+3. Commit to respect humanistic and help each other, and make employee friendly workplace where everyone finds worth for working and rearises growth by oneself.</p>
+          <h1>Improving Quality in Three Major Areas</h1>
+          <p class="campaign"> In order to provide customers with safety and peace of mind,  Rent-A-Car strives to improve quality in three major areas.
+Vehicle Quality Customer Service Quality Rental Location Quality
+More than just rental cars, we provide customers with a variety of services for satisfaction and peace of mind.
+Whenever and wherever we operate, appreciation for our customers always comes first. We not only strive to promote vehicle rentals, but also to create added value.
+We engage in a variety of other initiatives as well. As a company dealing in automobiles, the environment always remains a crucial concern. We were one of the first rental services to establish a hybrid rental class and provide eco-friendly driving.
+However, we will not rest on these laurels. Our sincere wish, moving forward, is to continue to serve the community, as a company that is friendly to both people and the environment.
+ Rent-A-Car relies on the support of its customers. We look forward to your business.  </p>
 
-
-            <div id="text"></div>
-            <p class="remark"> &nbsp&nbsp&nbsp (You can make the payment to the branch you received <br> &nbsp&nbsp&nbsp on the pick up date of receipt.)</p>
-              <button class="yesButton" onclick="overlayYES()">Apply</button>
-              <button class="noButton" onclick="overlayOFF()">Cancel</button>
-           
-        </div>
-      </div>
 
   </div>
 </div>

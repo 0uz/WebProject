@@ -55,8 +55,8 @@
     </div>
     <nav>
       <ul> 
-        <li><a href="" >Cars</a></li>
-        <li><a href="#">About Campaign</a></li>
+        <li><a href="cars.php" >Cars</a></li>
+        <li><a href="campaign.php">About Campaign</a></li>
         <?php
           if(isset($_SESSION['name'])){
             echo "<li><a href='controller/logout.php' >Logout</a></li>

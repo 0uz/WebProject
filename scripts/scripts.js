@@ -47,7 +47,7 @@ function overlayYES(){
 }
 
 function overlayON(cityID,IDuser,IDcar,brand,takeTime,dropTime) {
-  document.getElementById("text").innerHTML = brand+" will be rented <br> from "+cityID+"  <br> from "+takeTime+" until "+dropTime+" ?";
+  document.getElementById("text").innerHTML = "<br> &nbsp Brand: "+brand+"<br><br> &nbsp Pick up Location: "+cityID+"  <br><br> &nbsp Pick up Date: "+takeTime+" <br><br> &nbsp Return Date "+dropTime;
   document.getElementById("overlay").style.display = "block";
   carID=IDcar;
   userID=IDuser;
