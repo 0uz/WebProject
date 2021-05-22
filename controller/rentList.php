@@ -29,4 +29,12 @@
         }
     }
 
+    function getmail(){
+      $db = mysqli_connect("localhost","root","","car_rent");
+      $query = "SELECT email from user where id=".$_SESSION['user'];
+      $result = mysqli_query($db,$query);
+      $row = mysqli_fetch_array($result);
+      echo $row['email'];
+    }
+
 ?>
