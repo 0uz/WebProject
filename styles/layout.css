@@ -477,4 +477,65 @@ select {
 }
 
 
+/* rented car shout*/
+#rentedCarShout1{
+    position:relative;
+    left: -40px;
+    display: inline;
+    text-align: left !important;
+    font-size: 25px !important;
+    font-weight: bold;
+}
+#rentedCarShout2{
+  position:relative;
+  left: 25px;
+  display: inline;
+  text-align: left !important;
+  font-size: 25px !important;
+  font-weight: bold;
+}
+#rentedCarShout3{
+  position:relative;
+  left: 90px;
+  display: inline;
+  text-align: left !important;
+  font-size: 25px !important;
+  font-weight: bold;
 
+}
+
+.rentedCarsInfo{
+  position: relative;
+  margin-left: 75px;
+  display: inline;
+  font-size: 25px;
+  color: #232323;
+}
+
+.rentedCarsInfoCont{
+  position: relative;
+  bottom: 50px;
+
+}
+
+#rentedCarsButton{
+  position: relative;
+  left: 60px;
+  margin-right: 15px;
+  display: inline-block;
+  background-color: #232323;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.9;
+}
+
+#rentedCarsButton:hover {
+  opacity:1;
+}
+
+#rentedCarsButton:disabled {
+  text-decoration: line-through;
+  opacity:1;
+}

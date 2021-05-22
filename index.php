@@ -17,6 +17,7 @@
 
 </head>
 <body>
+
   <div class="form-popup" id="loginForm">
     <form action="controller/login.php" class="form-container" method="POST">
       <h1>Login</h1>
@@ -72,7 +73,8 @@
             }
           }
           if(isset($_SESSION['name'])){
-            echo "<li><a href='controller/logout.php' >Logout</a></li>
+            echo "<li><a href='rentedCars.php' >Rented Cars</a></li>
+                  <li><a href='controller/logout.php' >Logout</a></li>
                   <li><a href='profile.php' > Welcome ".$_SESSION['name']."</a></li>";
           }else{
             echo "<li id = 'loginButton'><a href='#' onclick='openForm()'>Login</a></li>";
