@@ -83,11 +83,6 @@
       ?></p>
     </div>
     <div class='formContainer'>
-<<<<<<< HEAD
-      <form action="controller/passwordChange.php" class="container" methot="GET">
-        <h1 style="text-align: center">Password Change</h1>
-
-=======
       <form action="controller/passwordChange.php" class="container" method="POST">
         <h1>Password Change</h1>
         <?php
@@ -100,7 +95,6 @@
             }
           }
         ?>
->>>>>>> 4514afee07cd40594935fcaec2acb666b3c482cc
         <label for="oldpsw"><b>Old Password</b></label>
         <input type="password" placeholder="Enter old Password" name="oldpsw" id="oldpsw" required>
         <label id="pswMatch" style="color: red; display:none"><b>Password not match</b></label>
@@ -115,10 +109,6 @@
     </div>
 
     <div class='formContainer'>
-<<<<<<< HEAD
-      <form action="/action_page.php" class="container">
-        <h1 style="text-align: center">Email Change</h1>
-=======
       <form action="controller/mailChange.php" class="container" method="POST">
         <h1>Email Change</h1>
         <?php
@@ -128,7 +118,6 @@
             }
           }
         ?>
->>>>>>> 4514afee07cd40594935fcaec2acb666b3c482cc
         <label id="emailMatch" style="color: red; display:none"><b>Email not match</b></label>
         <label for="email"><b>New mail</b></label>
         <input type="email" placeholder="Enter new mail" name="email1" id="email1" required>

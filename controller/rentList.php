@@ -8,6 +8,8 @@
         while($row = mysqli_fetch_array($result)){
           $brand = $row['carBrand'];
           $carID = $row['id'];
+          $carPrice = $row['carPrice'];
+          $deposit = $row['deposit'];
           $userID = $_SESSION['user'];
 
           echo "
@@ -18,9 +20,9 @@
             <p class='pricePerDay'> Price Per Day <br> $".$row['carPrice']."</p>
             <p class='pricePerDay'> Total Price (For 30 Day) <br> $".($row['carPrice']*30)." </p>
         
-            <i class='fas fa-cogs'>".$row['gear']."<i class='fas fa-gas-pump'></i> ".$row['fuel']." </i>
+            <i class='fas fa-cogs'>".$row['gear']."    <i class='fas fa-gas-pump'></i> ".ucfirst($row['fuel'])." </i>
 
-            <p><button onclick=overlayON(\"$city\",$userID,$carID,\"$brand\",\"$takeTime\",\"$dropTime\")> Rent Car Now </button></p>
+            <p><button onclick=overlayON(\"$city\",$userID,$carID,\"$brand\",\"$takeTime\",\"$dropTime\",$carPrice)> Rent Car Now </button></p>
           </div>
           
           ";
@@ -39,7 +41,7 @@
 
     function getRentedCars(){
       $db = mysqli_connect("localhost","root","","car_rent");
-      $query = "SELECT takeTime,dropTime,money,isCancelled,carBrand,photoPath FROM rentedcars,cars WHERE rentedcars.carID=cars.id AND userID=".$_SESSION['user'];
+      $query = "SELECT takeTime,dropTime,money,isCancelled,carBrand,photoPath,deposit,rentedcars.id as id FROM rentedcars,cars WHERE rentedcars.carID=cars.id AND userID=".$_SESSION['user'];
       $result = mysqli_query($db,$query);
       while($row = mysqli_fetch_array($result)){
         $photo = $row['photoPath'];
@@ -47,6 +49,8 @@
         $takeTime = $row['takeTime'];
         $dropTime = $row['dropTime'];
         $money = $row['money'];
+        $deposit = $row['deposit'];
+        $rentID = $row['id'];
         if($row['isCancelled']==1){
           echo "
           <div style=' margin:5px';>
@@ -58,6 +62,7 @@
               <p class='rentedCarsInfo'>$takeTime</p>
               <p class='rentedCarsInfo'>$dropTime</p>
               <p class='rentedCarsInfo'>$money\$</p>
+              <p class='rentedCarsInfo'>$deposit\$</p>
               <Button disabled id='rentedCarsButton'>Cancel</Button>
             </div>
           </div>
@@ -73,7 +78,8 @@
                 <p class='rentedCarsInfo'>$takeTime</p>
                 <p class='rentedCarsInfo'>$dropTime</p>
                 <p class='rentedCarsInfo'>$money\$</p>
-                <Button id='rentedCarsButton'>Cancel</Button>
+                <p class='rentedCarsInfo'>$deposit\$</p>
+                <Button id='rentedCarsButton' onclick=cancelRent($rentID)>Cancel</Button>
               </div>
             </div>
           ";

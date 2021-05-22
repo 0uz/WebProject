@@ -74,6 +74,7 @@
         <p id="rentedCarShout1">Take Time</p>
         <p id="rentedCarShout2">Drop time</p>
         <p id="rentedCarShout3">Money</p>
+        <p id="rentedCarShout4">Deposit</p>
       </section>
           <?php
           include_once("controller/rentlist.php");

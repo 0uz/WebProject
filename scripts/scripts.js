@@ -39,21 +39,28 @@
 
   }
 //---------------------------------Overlay
-var carID,userID,timeTake,timeDrop,city;
+var carID,userID,timeTake,timeDrop,city,money;
 function overlayYES(){
   overlayOFF();
-  window.location.replace("controller/rentCar.php?carID="+carID+"&userID="+userID+"&takeTime="+timeTake+"&dropTime="+timeDrop+"&city="+city);
+  window.location.replace("controller/rentCar.php?carID="+carID+"&userID="+userID+"&takeTime="+timeTake+"&dropTime="+timeDrop+"&city="+city+"&money="+money);
   
 }
 
-function overlayON(cityID,IDuser,IDcar,brand,takeTime,dropTime) {
-  document.getElementById("text").innerHTML = "<br> &nbsp Brand: "+brand+"<br><br> &nbsp Pick up Location: "+cityID+"  <br><br> &nbsp Pick up Date: "+takeTime+" <br><br> &nbsp Return Date "+dropTime;
+
+function cancelRent(id){
+  window.location.replace("controller/rentCancel.php?ID="+id);
+  
+}
+
+function overlayON(cityID,IDuser,IDcar,brand,takeTime,dropTime,Cmoney) {
+  document.getElementById("text").innerHTML = "<br> &nbsp Brand: "+brand.toUpperCase()+"<br><br> &nbsp Pick up Location: "+cityID+"  <br><br> &nbsp Pick up Date: "+takeTime+" <br><br> &nbsp Return Date "+dropTime;
   document.getElementById("overlay").style.display = "block";
   carID=IDcar;
   userID=IDuser;
   timeTake=takeTime;
   timeDrop=dropTime;
   city=cityID;
+  money=Cmoney*30;
 }
 
 function overlayOFF() {

@@ -506,9 +506,19 @@ select {
 
 }
 
+#rentedCarShout4{
+  position:relative;
+  left: 130px;
+  display: inline;
+  text-align: left !important;
+  font-size: 25px !important;
+  font-weight: bold;
+
+}
+
 .rentedCarsInfo{
   position: relative;
-  margin-left: 75px;
+  margin-left: 50px;
   display: inline;
   font-size: 25px;
   color: #232323;
