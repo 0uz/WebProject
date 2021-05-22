@@ -60,8 +60,9 @@
         <li><a href="campaign.php">About Campaign</a></li>
         <?php
           if(isset($_SESSION['name'])){
-            echo "<li><a href='controller/logout.php'>Logout</a></li>
-                  <li> Welcome ".$_SESSION['name']."</li>";
+            echo "<li><a href='rentedCars.php' >Rented Cars</a></li>
+                  <li><a href='controller/logout.php' >Logout</a></li>
+                  <li><a href='profile.php' > Welcome ".$_SESSION['name']."</a></li>";
           }else{
             echo "<li id = 'loginButton'><a href='#' onclick='openForm()'>Login</a></li>";
           }

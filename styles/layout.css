@@ -531,8 +531,8 @@ select {
 }
 
 #rentedCarsButton{
-  position: relative;
-  left: 50px;
+  position: absolute;
+  right: -50px;
   display: inline-block;
   background-color: #232323;
   color: white;
