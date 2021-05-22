@@ -61,9 +61,9 @@
             <div class='rentedCarsInfoCont' style='width:75%; display:inline-block'>
               <p class='rentedCarsInfo'>$takeTime</p>
               <p class='rentedCarsInfo'>$dropTime</p>
-              <p class='rentedCarsInfo'>$money\$</p>
-              <p class='rentedCarsInfo'>$deposit\$</p>
-              <Button disabled id='rentedCarsButton'>Cancel</Button>
+              <p class='rentedCarsInfo' style='text-decoration: line-through;'>$money\$</p>
+              <p class='rentedCarsInfo' style='text-decoration: line-through;'>$deposit\$</p>
+              <Button disabled id='rentedCarsButton'>Canceled</Button>
             </div>
           </div>
         ";
