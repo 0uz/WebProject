@@ -76,13 +76,31 @@
   <div id="container" class="clear">
     <div class='iconContainer'>
       <i class="fas fa-user" id='userIcon'></i>
-      <p class="iconInfo">Oguzhan Duymaz</p>
-      <p class="iconInfo">ouz@ouz.com</p>
+      <p class="iconInfo"><?php echo strtoupper($_SESSION['name']); ?></p>
+      <p class="iconInfo"><?php
+        include_once("controller/rentlist.php");
+        getmail();
+      ?></p>
     </div>
     <div class='formContainer'>
+<<<<<<< HEAD
       <form action="controller/passwordChange.php" class="container" methot="GET">
         <h1 style="text-align: center">Password Change</h1>
 
+=======
+      <form action="controller/passwordChange.php" class="container" method="POST">
+        <h1>Password Change</h1>
+        <?php
+          if(isset($_GET['message'])) {
+            if($_GET['message'] == 'successPW'){
+              echo "<label style='color: green; display:block'><b>Password succesfully changed</b></label>";
+            }
+            if($_GET['message'] == 'failPW'){
+              echo "<label style='color: red; display:block'><b>Old password is not correct</b></label>";
+            }
+          }
+        ?>
+>>>>>>> 4514afee07cd40594935fcaec2acb666b3c482cc
         <label for="oldpsw"><b>Old Password</b></label>
         <input type="password" placeholder="Enter old Password" name="oldpsw" id="oldpsw" required>
         <label id="pswMatch" style="color: red; display:none"><b>Password not match</b></label>
@@ -97,14 +115,26 @@
     </div>
 
     <div class='formContainer'>
+<<<<<<< HEAD
       <form action="/action_page.php" class="container">
         <h1 style="text-align: center">Email Change</h1>
+=======
+      <form action="controller/mailChange.php" class="container" method="POST">
+        <h1>Email Change</h1>
+        <?php
+          if(isset($_GET['message'])) {
+            if($_GET['message'] == 'successMAIL'){
+              echo "<label style='color: green; display:block'><b>Mail succesfully changed</b></label>";
+            }
+          }
+        ?>
+>>>>>>> 4514afee07cd40594935fcaec2acb666b3c482cc
         <label id="emailMatch" style="color: red; display:none"><b>Email not match</b></label>
         <label for="email"><b>New mail</b></label>
-        <input type="password" placeholder="Enter new mail" name="email1" id="email1" required>
+        <input type="email" placeholder="Enter new mail" name="email1" id="email1" required>
         
         <label for="psw"><b>New mail confirm</b></label>
-        <input type="password" placeholder="Enter new mail" name="email2" id="email2" required>
+        <input type="email" placeholder="Enter new mail" name="email2" id="email2" required>
 
         <button type="submit" class="registerbtn" id="emailbtn">Change Password</button>
       </form>
