@@ -1,8 +1,5 @@
 <?php
   session_start();
-  if(!isset($_SESSION['user'])){
-    header("Location: http://localhost/WebProject/index.php?message=login");
-  }
 ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
@@ -83,10 +80,10 @@
       <div id="overlay">
         <div id="overlayContainer">
             <div id="text"></div>
-            <div id="overlayButtons">
-              <button onclick="overlayYES()">Yes</button>
-              <button onclick="overlayOFF()">No</button>
-            </div>
+            
+              <button class="yesButton" onclick="overlayYES()">Yes</button>
+              <button class="noButton" onclick="overlayOFF()">No</button>
+           
         </div>
       </div>
 

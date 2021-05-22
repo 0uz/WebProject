@@ -47,7 +47,7 @@ function overlayYES(){
 }
 
 function overlayON(cityID,IDuser,IDcar,brand,takeTime,dropTime) {
-  document.getElementById("text").innerHTML = brand+" markali araba <br>"+cityID+" sehrinden <br>"+takeTime+" tarihinden "+dropTime+" tarihine kadar kiralanacaktir?";
+  document.getElementById("text").innerHTML = brand+" will be rented <br> from "+cityID+"  <br> from "+takeTime+" until "+dropTime+" ?";
   document.getElementById("overlay").style.display = "block";
   carID=IDcar;
   userID=IDuser;
