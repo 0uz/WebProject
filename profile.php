@@ -56,8 +56,8 @@
     </div>
     <nav>
       <ul> 
-        <li><a href="" >Cars</a></li>
-        <li><a href="">About Campaign</a></li>
+        <li><a href="cars.php" >Cars</a></li>
+        <li><a href="campaign.php">About Campaign</a></li>
         <?php
           if(isset($_SESSION['name'])){
             echo "<li><a href='controller/logout.php'>Logout</a></li>
@@ -81,7 +81,7 @@
     </div>
     <div class='formContainer'>
       <form action="controller/passwordChange.php" class="container" methot="GET">
-        <h1>Password Change</h1>
+        <h1 style="text-align: center">Password Change</h1>
 
         <label for="oldpsw"><b>Old Password</b></label>
         <input type="password" placeholder="Enter old Password" name="oldpsw" id="oldpsw" required>
@@ -98,7 +98,7 @@
 
     <div class='formContainer'>
       <form action="/action_page.php" class="container">
-        <h1>Email Change</h1>
+        <h1 style="text-align: center">Email Change</h1>
         <label id="emailMatch" style="color: red; display:none"><b>Email not match</b></label>
         <label for="email"><b>New mail</b></label>
         <input type="password" placeholder="Enter new mail" name="email1" id="email1" required>
