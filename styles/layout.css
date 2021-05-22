@@ -349,30 +349,68 @@ div:focus {
   bottom: 0;
   background-color: rgba(0,0,0,0.5);
   z-index: 2;
+ 
+  
 }
 
 #text{
-  font-size: 30px;
-  color: white;
+  font-size: 22px;
+  color: gray;
+  text-align: center;
+  
+  
 /*  transform: translate(-50%,-50%); */
-  border-style: solid;
+  
  
 }
 
-#overlayButtons{
-  font-size: 50px;
+.yesButton{
+  border: none;
+  background-color: black;
+  text-align: center;
+  color: white;
+  cursor: pointer;
+  width: 40%;
+  font-size: 20px;
+  margin: 3%;
+  box-shadow: 0 3px 6px 0 black ; 
+  
 }
 
-#overlayContainer {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  width: 350px;
-  border-color: red;
-  border-width: 15px;
-  border-style: solid;
-  background-color: black;
+.yesButton:hover {
+  opacity: 0.7;
 }
+
+.noButton{
+  border: none;
+  background-color: black;
+  text-align: center;
+  color: white;
+  cursor: pointer;
+  width: 40%;
+  font-size: 20px;
+  float: right;
+  margin: 3%;
+  box-shadow: 0 3px 6px 0 black ; 
+  
+  
+}
+.noButton:hover {
+  opacity: 0.7;
+}
+
+
+#overlayContainer {
+ 
+  position: fixed ;
+  top: 40% ;
+  right: 40%;
+  width: 450px;
+  background-color: white;
+  box-shadow: 0 3px 6px 0 white ; 
+  border-radius: 5%;
+}
+
 
 /*icon for rent */
 select {
