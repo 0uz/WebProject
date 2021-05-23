@@ -80,10 +80,12 @@
     <section id="shout">
       <p id="rentedCarShout1">Our Models</p>
     </section>
-    <?php
-      include_once("controller/rentlist.php");
-      getCars();
-    ?>
+    <div style="display:inline-block;">
+      <?php
+        include_once("controller/rentlist.php");
+        getCars();
+      ?>
+    </div>
   </div>
 </div>
 
