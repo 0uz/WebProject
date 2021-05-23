@@ -104,19 +104,19 @@
         <!-- Full-width images with number and caption text -->
         <div class="mySlides fade">
           <div class="numbertext">1 / 3</div>
-          <img src="images/arac1.png" style="width:100%">
+          <img src="images/arac1.png" style="height:550px; width:950px; object-fit:scale-down;">
           <div class="text">Caption Text</div>
         </div>
 
         <div class="mySlides fade">
           <div class="numbertext">2 / 3</div>
-          <img src="images/arac17.png" style="width 100%">
+          <img src="images/arac17.png" style="height:550px; width:950px; object-fit:scale-down;">
           <div class="text">Caption Two</div>
         </div>
 
         <div class="mySlides fade">
           <div class="numbertext">3 / 3</div>
-          <img src="images/arac3.png" style="width:100%">
+          <img src="images/audirs.png" style="height:550px; width:950px; object-fit:scale-down;">
           <div class="text">Caption Three</div>
         </div>
 
