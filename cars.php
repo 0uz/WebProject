@@ -56,9 +56,15 @@
         <li><a href="campaign.php">About Campaign</a></li>
         <?php
           if(isset($_SESSION['name'])){
+            if($_SESSION['user']==6){
+              echo "<li><a href='admin.php'>Add Car</a></li>
+              <li><a href='controller/logout.php' >Logout</a></li>
+              <li><a href='profile.php' > Welcome ".$_SESSION['name']."</a></li>";
+            }else{
             echo "<li><a href='rentedCars.php' >Rented Cars</a></li>
                   <li><a href='controller/logout.php' >Logout</a></li>
                   <li><a href='profile.php' > Welcome ".$_SESSION['name']."</a></li>";
+            }
           }else{
             echo "<li id = 'loginButton'><a href='#' onclick='openForm()'>Login</a></li>";
           }
@@ -71,38 +77,15 @@
 
 <div class="wrapper row2">
   <div id="container" class="clear">
-    
-
-
-<div class="flip-card">
-  <div class="flip-card-inner">
-    <div class="flip-card-front">
-      <img src="images/arac3.png" alt="Avatar" style="width:300px;height:200px;">
+    <section id="shout">
+      <p id="rentedCarShout1">Our Models</p>
+    </section>
+    <div style="display:inline-block;">
+      <?php
+        include_once("controller/rentlist.php");
+        getCars();
+      ?>
     </div>
-    <div class="flip-card-back">
-      <h1>BMW</h1> 
-      <p>  Fuel Type</p> 
-      <p>  Transmission Type</p>
-    </div>
-  </div>
-</div>
-
-<div class="flip-card">
-  <div class="flip-card-inner">
-    <div class="flip-card-front">
-      <img src="images/arac3.png" alt="Avatar" style="width:300px;height:200px;">
-    </div>
-    <div class="flip-card-back">
-      <h1>BMW</h1> 
-      <p>  Fuel Type</p> 
-      <p>  Transmission Type</p>
-    </div>
-  </div>
-</div>
-
-
-
-
   </div>
 </div>
 

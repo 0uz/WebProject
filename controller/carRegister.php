@@ -17,7 +17,7 @@ $db = mysqli_connect("localhost","root","","car_rent");
     $fuel = mysqli_real_escape_string($db,$_POST['fuel']);
     $imageFile = mysqli_real_escape_string($db,"arac".($row['id']+1).".png");
     $cityID = mysqli_real_escape_string($db,$_POST['city']);
-    $query ="INSERT INTO cars (carBrand,carName,carPrice,deposit,gear,fuel,photoPath,cityID) VALUES ('$carBrand','$carName',$carPrice,$deposit,'$gear','$fuel','$imageFile',$cityID)";
+    $query ="INSERT INTO cars (carBrand,carName,carPrice,deposit,gear,fuel,photoPath,cityID) VALUES ('$carBrand','$carName',$carPrice,$deposit,'$gear','$fuel','$imageFile','$cityID')";
     $result = mysqli_query($db,$query);
     header("Location: http://localhost/WebProject/index.php");
     exit();

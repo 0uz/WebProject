@@ -52,13 +52,19 @@
     </div>
     <nav>
       <ul> 
-        <li><a href="" >Cars</a></li>
-        <li><a href="">About Campaign</a></li>
+        <li><a href="cars.php" >Cars</a></li>
+        <li><a href="campaign.php">About Campaign</a></li>
         <?php
           if(isset($_SESSION['name'])){
+            if($_SESSION['user']==6){
+              echo "<li><a href='admin.php'>Add Car</a></li>
+              <li><a href='controller/logout.php' >Logout</a></li>
+              <li><a href='profile.php' > Welcome ".$_SESSION['name']."</a></li>";
+            }else{
             echo "<li><a href='rentedCars.php' >Rented Cars</a></li>
                   <li><a href='controller/logout.php' >Logout</a></li>
                   <li><a href='profile.php' > Welcome ".$_SESSION['name']."</a></li>";
+            }
           }else{
             echo "<li id = 'loginButton'><a href='#' onclick='openForm()'>Login</a></li>";
           }

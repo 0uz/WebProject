@@ -1,6 +1,6 @@
 html{overflow-y:scroll;} /* Forces a scrollbar when the viewport is larger than the websites content - CSS3 */
 
-body{margin:0; padding:0; font-size:13px; font-family:Georgia, "Times New Roman", Times, serif; color:#919191; background-color:#232323;}
+body{margin:0; padding:0; font-size:13px; font-family:Georgia,"Times New Roman", Times, serif; color:#919191; background-color:#232323;}
 
 .clear:after{content:"."; display:block; height:0; clear:both; visibility:hidden; line-height:0;}
 .clear{display:block; clear:both;}
@@ -522,11 +522,13 @@ select {
   display: inline;
   font-size: 25px;
   color: #232323;
+  
 }
 
 .rentedCarsInfoCont{
   position: relative;
   bottom: 50px;
+
 
 }
 
@@ -560,15 +562,11 @@ select {
 
 /*flip card */
 
-body {
-  font-family: Helvetica, sans-serif;
-  
-}
 
 .flip-card {
   background-color: white;
-  width: 300px;
-  height: 200px;
+  width: 450px;
+  height: 300px;
   perspective: 1000px;
   float: left;
   margin-left: 10px;
@@ -602,9 +600,18 @@ body {
   color: black;
 }
 
-.flip-card-back {
+.flip-card-back{
   background-color: white;
   color: gray;
   transform: rotateY(180deg);
-  
+}
+
+.flip-card-back-info{
+  position: relative;
+  top: 30%;
+}
+
+.flip-card-back p{
+  position: relative;
+  top: 30%;
 }
