@@ -151,7 +151,7 @@ input, textarea, select{font-size:12px; font-family:Georgia,"Times New Roman",Ti
   
   /* Set a style for the submit/login button */
   .form-container .btn {
-    background-color: #04AA6D;
+    background-color: #74454E;
     color: white;
     padding: 16px 20px;
     border: none;
@@ -162,7 +162,7 @@ input, textarea, select{font-size:12px; font-family:Georgia,"Times New Roman",Ti
   }
   
   .form-container .btnReg {
-    background-color: #3605e6;
+    background-color: #333333;
     color: white;
     padding: 16px 20px;
     border: none;
@@ -174,12 +174,12 @@ input, textarea, select{font-size:12px; font-family:Georgia,"Times New Roman",Ti
   
   /* Add a red background color to the cancel button */
   .form-container .cancel {
-    background-color: red;
+    background-color: black;
   }
   
   /* Add some hover effects to buttons */
-  .form-container .btn:hover, .open-button:hover {
-    opacity: 1;
+  .form-container .btn:hover, .open-button:hover, .btnReg:hover{
+    opacity: 1; 
   }
 
   /*hr 1 */
@@ -194,7 +194,8 @@ input, textarea, select{font-size:12px; font-family:Georgia,"Times New Roman",Ti
 
 /* Slideshow container */
 .slideshow-container {
-  max-width: 1000px;
+  max-width: 950px;
+  max-height: 550px;
   position: relative;
   margin: auto;
 }
@@ -582,10 +583,11 @@ select {
 .flip-card {
   background-color: white;
   width: 450px;
-  height: 300px;
+  height: 250px;
   perspective: 1000px;
   float: left;
   margin-left: 10px;
+  margin-bottom: 15px;
 }
 
 .flip-card-inner {

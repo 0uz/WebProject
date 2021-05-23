@@ -78,7 +78,7 @@
 <div class="wrapper row2">
   <div id="container" class="clear">
           <h1> Company Outline </h1>
-          <p class="campaign">We are  Rent-A-Car. Founded in 2021,  Rent-A-Car is Turkey's most distinguished rental car company.
+          <p class="campaign">&nbsp&nbsp&nbsp We are  Rent-A-Car. Founded in 2021,  Rent-A-Car is Turkey's most distinguished rental car company.
 We provide customers with approximately 120 locations and 2,000 vehicles throughout Turkey.
 As we are not affiliated with any specific automaker, we are able to provide a variety of vehicle makes and models for customers to rent.
 Rather than let vehicles age, we also replace our most popular passenger vehicles every few years.
@@ -90,7 +90,7 @@ The most trusted name in vehicle rentals. </p>
 2. Challenge always to introduce innovative and unique services to offer convenient and economical vehicle usage services.<br>
 3. Commit to respect humanistic and help each other, and make employee friendly workplace where everyone finds worth for working and rearises growth by oneself.</p>
           <h1>Improving Quality in Three Major Areas</h1>
-          <p class="campaign"> In order to provide customers with safety and peace of mind,  Rent-A-Car strives to improve quality in three major areas.
+          <p class="campaign">&nbsp&nbsp&nbspIn order to provide customers with safety and peace of mind,  Rent-A-Car strives to improve quality in three major areas.
 Vehicle Quality Customer Service Quality Rental Location Quality
 More than just rental cars, we provide customers with a variety of services for satisfaction and peace of mind.
 Whenever and wherever we operate, appreciation for our customers always comes first. We not only strive to promote vehicle rentals, but also to create added value.
