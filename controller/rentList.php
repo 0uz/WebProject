@@ -90,4 +90,26 @@
       }
     }
 
+    function getCars(){
+      $db = mysqli_connect("localhost","root","","car_rent");
+      $query = "SELECT * from cars";
+      $result = mysqli_query($db,$query);
+      while($row = mysqli_fetch_array($result)){
+          echo "
+          <div class='flip-card'>
+          <div class='flip-card-inner'>
+            <div class='flip-card-front'>
+              <img src='images/".$row['photoPath']."' alt='Avatar' style='width:300px;height:200px;'>
+            </div>
+            <div class='flip-card-back'>
+              <h1>".$row['carBrand']."</h1>
+              <h1>".$row['carName']."</h1> 
+              <p>".ucfirst($row['fuel'])."</p> 
+              <p>".ucfirst($row['gear'])."</p>
+            </div>
+          </div>
+        </div>";
+      }
+    }
+
 ?>

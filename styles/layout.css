@@ -522,11 +522,13 @@ select {
   display: inline;
   font-size: 25px;
   color: #232323;
+  
 }
 
 .rentedCarsInfoCont{
   position: relative;
   bottom: 50px;
+
 
 }
 
