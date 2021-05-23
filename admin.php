@@ -101,7 +101,7 @@
         </div>
         <div class='container'>
           <p>Fuel:</p>
-          <label class="">Auto
+          <label class="">Diesel
           <input type="radio" name="fuel" value="Diesel" required>
            <span class="radio"></span>
           </label>
