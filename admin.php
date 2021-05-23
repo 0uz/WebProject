@@ -1,7 +1,7 @@
 <?php
   session_start();
   if(!isset($_SESSION['user'])){
-    header("Location: http://localhost/WebProject/  .php?message=login");
+    header("Location: http://localhost/WebProject/index.php?message=login");
   }
 ?>
 

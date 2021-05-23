@@ -5,7 +5,10 @@
   var yyyy = today.getFullYear();
   today = mm + '/' + dd + '/' + yyyy;
   $('input[name="datetimes"]').daterangepicker({
-    "minDate": today
+    "minDate": today,
+    "opens": "center",
+    "autoApply": true,
+    "drops": "up"
   });
   
 
@@ -55,12 +58,16 @@ function cancelRent(id){
 function overlayON(cityID,IDuser,IDcar,brand,takeTime,dropTime,Cmoney) {
   document.getElementById("text").innerHTML = "<br> &nbsp Brand: "+brand.toUpperCase()+"<br><br> &nbsp Pick up Location: "+cityID+"  <br><br> &nbsp Pick up Date: "+takeTime+" <br><br> &nbsp Return Date "+dropTime;
   document.getElementById("overlay").style.display = "block";
+  const date1 = new Date(takeTime);
+  const date2 = new Date(dropTime);
+  const diffTime = Math.abs(date2 - date1);
+  const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24)); 
   carID=IDcar;
   userID=IDuser;
   timeTake=takeTime;
   timeDrop=dropTime;
   city=cityID;
-  money=Cmoney*30;
+  money=Cmoney*diffDays;
 }
 
 function overlayOFF() {
