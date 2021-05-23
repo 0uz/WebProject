@@ -14,7 +14,7 @@
 
           echo "
             <div class='card'>
-            <img src='images/".$row['photoPath']."' alt='Car PNG' style='width:100%'>
+            <img src='images/".$row['photoPath']."' alt='Car PNG' style='width: 250px; height: 130px;object-fit:scale-down;'>
             <h1>".$row['carBrand']."</h1>
             <p class='deposit'> Deposit <br> $".$row['deposit']." <p>
             <p class='pricePerDay'> Price Per Day <br> $".$row['carPrice']."</p>

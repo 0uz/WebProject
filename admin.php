@@ -51,7 +51,7 @@
 <div class="wrapper row1">
   <header id="header" class="clear">
     <div id="hgroup">
-      <h1><a href="#">Rent A Car</a></h1>
+      <h1><a href="">Rent A Car</a></h1>
       <h2>Affordable Rent A Car Website </h2>
     </div>
     <nav>
