@@ -18,7 +18,7 @@
       
             }
         }else{
-            header("Location: http://localhost/WebProject/index.php");
+            header("Location: http://localhost/WebProject/index.php?message=login");
 
         }
 ?>
